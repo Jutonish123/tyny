@@ -1,0 +1,346 @@
+body
+    margin: 0 auto
+.header
+    padding: 16px 50px
+    max-width: 1240px
+    margin: 0 auto
+    &-left
+        display: flex
+        justify-content: center
+        align-items: center
+    &-img1
+        margin-right: 20px
+    &-line
+        margin-right: 24px
+        height: 42px
+        border-left: 1px solid #C4C4C4
+    &-navbar__wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 100%
+    &-hamb 
+        display: none
+    .popup 
+        display: none
+    &-btn
+        color: #007DFE
+        font-size: 16px
+        font-weight: 400
+        background: #fff
+        border: 1px solid #007DFE
+        padding: 8px 28px 9px 32px
+    &-icon
+        display: flex
+        align-items: center
+        margin-left: 129px
+.menu
+    display: flex
+    & li
+        display: flex
+        align-items: center
+        & a
+            color: #0A2756
+            font-size: 16px
+            font-weight: 400
+            margin-right: 35px
+            &:hover
+                text-decoration: underline
+@media (max-width: 1000px) 
+    .header
+        &-navbar
+            width: 100%
+        &-navbar__wrap
+            width: 100%
+            display: flex
+            justify-content: space-between
+        .menu 
+            display: none
+        &-btn
+            margin-right: 0
+            margin-bottom: 39px
+        &-icon
+            margin-left: 0px
+        &-line
+            display: none
+        &-hamb 
+            display: flex
+            align-items: center
+        &-hamb__field 
+            padding: 10px 20px
+            cursor: pointer
+        &-bar 
+            display: block
+            width: 30px
+            height: 3px
+            margin: 6px auto
+            background-color: #000
+            transition: 0.2s
+        .popup 
+            position: fixed
+            top: 60px
+            left: -100%
+            width: 100%
+            height: 100%
+            background-color: #fff
+            z-index: 100
+            display: flex
+            transition: 0.3s
+        .popup.open 
+            left: 0
+        .popup .menu 
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: start
+            padding: 50px 0
+            overflow: auto
+        .popup .menu > li 
+            &:nth-child(5)
+                margin-bottom: 20px
+        .popup .menu > li > a 
+            width: 100%
+            display: flex
+            justify-content: center
+            padding: 10px 0
+            font-size: 20px
+            font-weight: bold
+            margin-right: 0
+            color: #3f3f3f
+        .popup .header-menu > li > a:hover 
+            background-color: rgba(122, 82, 179, 0.1)
+        &-hamb__field.active &-bar:nth-child(2) 
+                opacity: 0
+        &-hamb__field.active &-bar:nth-child(1) 
+                transform: translateY(9px) rotate(45deg)
+        &-hamb__field.active &-bar:nth-child(3) 
+                transform: translateY(-9px) rotate(-45deg)
+    body.noscroll 
+        overflow: hidden
+
+.promo
+    padding: 39px 0 15px 0
+    background: #0A2756
+    &-size
+        padding: 0 50px
+        max-width: 1240px
+        margin: 0 auto
+        @media (max-width: 680px)
+            padding: 0 20px
+    &-cofer
+        display: flex
+        justify-content: space-between
+        margin-bottom: 28px
+    &-subs
+        display: flex
+        flex-direction: column
+        @media (max-width: 630px)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+    &-imag1
+        @media (max-width: 1000px)
+            width: 394px
+            height: 220px
+        @media (max-width: 680px)
+            width: 280px
+            height: 157px
+    &-rega
+        background: #007DFE
+        padding: 26px 13px
+        color: #FFF
+        font-size: 14px
+        line-height: 140%
+        letter-spacing: 9.38px
+        border: 0
+        margin: 65px 0 48px 0
+        &:hover
+            background: #009DFE
+        @media (max-width: 340px)
+            letter-spacing: 4.2px
+    &-text1
+        color: #FFF
+        font-size: 20px
+        font-weight: 500
+        margin-bottom: 41px
+    &-texe2
+        color: #FFF
+        font-size: 18px
+        font-weight: 400
+    &-imag
+        height: 361px
+        margin-top: -15px
+        @media (max-width: 1000px)
+            width: 244px
+            height: 211px
+        @media (max-width: 680px)
+            width: 237px
+            height: 215px
+        @media (max-width: 630px)
+            display: none
+    &-imag2
+        display: none
+        width: 237px
+        height: 215px
+        @media (max-width: 630px)
+            display: block
+            width: 237px
+            height: 215px
+    &-arrow
+        text-align: center
+        &__img
+            animation: promo_arrow_anim 3s infinite ease-in-out
+        @keyframes promo_arrow_anim
+            0% 
+                padding: 0 0 20px
+            50% 
+                padding: 20px 0 0
+            100% 
+                padding: 0 0 20px
+.slider
+    max-width: 1240px
+    margin: 0 auto
+    height: 723px
+    padding-top: 72px
+    &-title
+        margin-left: 50px
+        color: #0A2756
+        font-size: 60px
+        font-weight: 300
+        margin-bottom: 33px
+        @media (max-width: 364px)
+            margin-left: 0
+            text-align: center
+.swiper
+    height: 450px
+    text-align: center
+    &-wrapper
+        margin-bottom: 30px
+.swiper-pagination-bullets
+    & span
+        background-color: #000
+        height: 10px
+        width: 10px
+.swiper-pagination-horizontal.swiper-pagination-bullets 
+ .swiper-pagination-bullet
+    margin-right: 20px
+.swiper-button-next, .swiper-button-prev
+    height: 85px
+    @media (max-width: 1000px)
+        display: none
+.info
+    position: relative
+    margin: 0 auto
+    width: 378px
+    background-color: rgba(0, 128, 255, 0.70)
+    text-align: left
+    padding: 25px 0 25px 30px
+    margin-top: -119px
+    &-text1
+        color: #FFF
+        font-size: 24px
+        font-weight: 500
+    &-text2
+        color: #FFF
+        font-size: 18px
+        font-weight: 400
+.form
+    background: #0A2756
+    &-size
+        max-width: 1240px
+        padding: 139px 220px 100px 220px 
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 25px
+        @media (max-width: 1000px)
+            padding: 139px 70px 100px 70px
+        @media (max-width: 680px)
+            padding: 139px 20px 100px 20px
+        @media (max-width: 630px)
+            display: flex
+            flex-direction: column
+
+    &-title
+        color: #FFF
+        font-size: 60px
+        font-weight: 300
+        grid-column-start: 1
+        grid-column-end: 3
+        margin-bottom: 61px
+        @media (max-width: 1000px)
+            font-size: 50px
+        @media (max-width: 610px)
+            font-size: 40px
+    &-inpet1
+        height: 49px
+        padding-left: 19px
+        color: rgba(0, 0, 0, 0.50)
+        font-size: 18px
+        font-weight: 400  
+    &-inpet2
+        height: 49px
+        padding-left: 19px
+        color: rgba(0, 0, 0, 0.50)
+        font-size: 18px
+        font-weight: 400
+    &-inpet3
+        grid-column-start: 1
+        grid-column-end: 3
+        padding-left: 19px
+        height: 120px
+        color: rgba(0, 0, 0, 0.50)
+        font-size: 18px
+        font-weight: 400
+        resize: none
+    &-btn
+        color: #FFF
+        width: 241px
+        font-size: 14px
+        font-weight: 700
+        padding: 25px 14px
+        background: #007DFE
+        grid-column-start: 2
+        grid-column-end: 3
+        border: 0
+        justify-self: end
+        &:hover
+            background: #009DFE
+.footer
+    background: #0A2756
+    height: 300px
+    &-conten
+        max-width: 1240px
+        padding: 20px 220px 100px 220px 
+        margin: 0 auto
+        text-align: center
+        @media (max-width: 1000px)
+            padding: 20px 70px 100px 70px 
+        @media (max-width: 560px)
+            padding: 20px 0px 100px 0px
+        &-mail
+            color: #FFF
+            font-size: 40px
+            font-weight: 300
+            @media (max-width: 422px)
+                font-size: 28px
+        &-number
+            color: #FFF
+            font-size: 32px
+            font-weight: 300
+            margin-bottom: 20px
+            @media (max-width: 422px)
+                font-size: 22px
+        &-info
+            color: #FFF
+            font-size: 18px
+            font-weight: 300
+            text-decoration: underline
+            @media (max-width: 422px)
+
+            &:hover
+                text-decoration: none
+            
